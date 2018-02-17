@@ -9,7 +9,7 @@ public class NumberToWordsConverter {
 	
 	public static void main(final String[] args) {
 
-		System.out.print( "Type any number for the program: " );
+		System.out.print( "Type any number less then 100000 for the program: " );
 
 		String inputNumber = scanner.nextLine();
 		
@@ -56,10 +56,11 @@ public class NumberToWordsConverter {
 		}
 
 		if (n < 10000000) {
-			return convert(n / 100000) + " Lakh" + ((n % 100000 != 0) ? " " : "") + convert(n % 100000);
+			return convert(n / 100000) + " Hundred" + ((n % 100000 != 0) ? " " : "") + convert(n % 100000);
 		}
 
-		return convert(n / 10000000) + " Crore" + ((n % 10000000 != 0) ? " " : "") + convert(n % 10000000);
+		//return convert(n / 100000) + " Crore" + ((n % 10000000 != 0) ? " " : "") + convert(n % 10000000);
+		return ("Number beyond range");
 	}
 
 }
